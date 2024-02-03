@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1.title= title
+
+  p The inventory has the following amounts:
+
+  ul
+    li #[strong Categories:] !{category_count}
+    li #[strong Items:] !{item_count}

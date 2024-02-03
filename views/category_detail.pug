@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+  h1.title= title
+  .category-details
+    h1#category-name=category.name
+    p#category-description=category.description
+
+    div.items-list
+      h4 Items
+      if items.length
+        each item in items
+          .list-item
+              a(href=item.url) #{item.name}
+              p (x#{item.amount})
+      else
+        p This category has no items.
+  hr
+  p
+    a(href=category.url+'/update') Update category
+  p
+    a(href=category.url+'/delete').delete Delete category

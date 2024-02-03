@@ -4,4 +4,11 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    nav.nav-bar
+      a(href="/categories").nav-item Categories
+      a(href="/items").nav-item Items
+      a(href="/").nav-item Home
+      a(href="/category/create").nav-item.add + Add Category
+      a(href="/item/create").nav-item.add + Add Item
+    .content
+      block content

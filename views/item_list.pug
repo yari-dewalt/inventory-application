@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1.title= title
+
+  if item_list.length
+    .items
+      each item in item_list
+        .item
+          a(href=item.url).item-name #{item.name}
+          h3 (#{item.category.name})
+          p.item-amount x#{item.amount}
+  else
+    p there are no items.
